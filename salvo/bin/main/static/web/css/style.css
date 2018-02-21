@@ -1,0 +1,31 @@
+body {
+    
+    color:white;
+
+}
+
+.grid {
+
+    width: 440px;
+    padding: 0;
+
+}
+
+.cell {
+ display: inline-block;
+ width: 40px;
+ height: 40px;
+ margin: 0;
+ padding: 0;
+ outline : 1px solid black;
+
+}
+
+body {
+
+    background:url(World_Of_Warship_Ships_Eagles_German_521544_1280x800.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat : none;
+
+   }
