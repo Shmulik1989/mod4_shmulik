@@ -53,29 +53,37 @@ public class SalvoApplication {
 
 			//Instantiate ships and create ships locations for gamePlayer.
 			Ship ship1 = new Ship(Ship.Type.Battleship, Arrays.asList("A1", "B1", "C1", "D1", "E1"));
-			Ship ship2 = new Ship(Ship.Type.Cruiser, Arrays.asList("B1", "B2", "B3"));
-			Ship ship3 = new Ship(Ship.Type.Submarine, Arrays.asList("A2", "B2", "C2", "D2"));
-			Ship ship4 = new Ship(Ship.Type.Patrolboat, Arrays.asList("F2", "F3"));
+			Ship ship2 = new Ship(Ship.Type.Cruiser, Arrays.asList("B5", "B6", "B7"));
+			Ship ship3 = new Ship(Ship.Type.Submarine, Arrays.asList("F9", "G9", "H9", "I9"));
+			Ship ship4 = new Ship(Ship.Type.Patrolboat, Arrays.asList("F4", "F5"));
 			Ship ship5 = new Ship(Ship.Type.Destroyer, Arrays.asList("J1", "J2", "J3", "J4", "J5"));
-			Ship ship6 = new Ship(Ship.Type.Battleship, Arrays.asList("C1", "C2", "C3", "C4", "C5"));
+			Ship ship6 = new Ship(Ship.Type.Battleship, Arrays.asList("E9", "F9", "G9", "H9", "I9"));
 			Ship ship7 = new Ship(Ship.Type.Cruiser, Arrays.asList("D1", "D2", "D3"));
-			Ship ship8 = new Ship(Ship.Type.Submarine, Arrays.asList("G1", "G2", "G3", "G4", "G5"));
+			Ship ship8 = new Ship(Ship.Type.Submarine, Arrays.asList("A6", "A7", "A8", "A9"));
 			Ship ship9 = new Ship(Ship.Type.Patrolboat, Arrays.asList("H3", "H4"));
 			Ship ship10 = new Ship(Ship.Type.Destroyer, Arrays.asList("J1", "J2", "J3", "J4", "J5"));
 
-			//Add ships to players using the method in GamePlayer.
+			//Add ships to players using the method in GamePlayer and save them.
 			gamePlayer1.addShip(ship1);
 			gamePlayer1.addShip(ship2);
 			gamePlayer1.addShip(ship3);
-			gamePlayer2.addShip(ship4);
-			gamePlayer2.addShip(ship5);
+			gamePlayer1.addShip(ship4);
+			gamePlayer1.addShip(ship5);
 			gamePlayer2.addShip(ship6);
+			gamePlayer2.addShip(ship7);
+			gamePlayer2.addShip(ship8);
+			gamePlayer2.addShip(ship9);
+			gamePlayer2.addShip(ship10);
 			shipRepository.save(ship1);
 			shipRepository.save(ship2);
 			shipRepository.save(ship3);
 			shipRepository.save(ship4);
 			shipRepository.save(ship5);
 			shipRepository.save(ship6);
+			shipRepository.save(ship7);
+			shipRepository.save(ship8);
+			shipRepository.save(ship9);
+			shipRepository.save(ship10);
 
 		};
 	}

@@ -1,15 +1,16 @@
 //Create the single source of truth.
 function DataHandler(){
 
-    //Init function
+    //Init function to start the chain of event
     this.init = function(){
         //We call createGrid function twice because we want to create two grids, One for the player's ships and one for the Salvoes(hits).
-        this.createGrid('grid1');
-        this.createGrid('grid2');
+        this.createGrid('#ships', 'grid1');
+        this.createGrid('#salvoes', 'grid2');
+        this.getGameData();
 
     }
     //A function that creates the grid using two nested for loops, One for the raws and one for the columns
-    this.createGrid = function(grid) {
+    this.createGrid = function(container, grid) {
 
         var grid = $('<div>').addClass("grid");
 
@@ -32,15 +33,36 @@ function DataHandler(){
             }
         }
 
-        $('.container').append(grid);
+        $(container).append(grid);
 
     };
 
-}
+    //Get the current player data according to the player id using the getParamterByName method.
+    this.getGameData = function(){
+        
+            var that = this;
+        
+            $.getJSON('http://localhost:8080/api/api/game_view/' + this.getParameterByName('gp'), function(response){
 
-this.getGameData = function(){
+                that.gamePlayerData = response;
+        
+                console.log(that.gamePlayerData);
+                
+        });    
+        
+    }
 
-    fetch('http://localhost:8080/api/api/game_view/1')
+    //
+    this.getParameterByName = function(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
 
 }
 

@@ -1,6 +1,6 @@
  //execute code when DOM is ready.
 $(document).ready(function(){
-    
+            var that = this;
         //send a AJAX request to the games database(/api/games).
         $.getJSON('http://localhost:8080/api/games', function(data) {
             that.gamesInfo = data;

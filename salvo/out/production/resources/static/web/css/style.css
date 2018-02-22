@@ -1,6 +1,6 @@
 body {
     
-    color:rgb(240, 9, 9);
+    color:white;
 
 }
 
@@ -15,9 +15,40 @@ h3 {
 
 }
 
+#battleship {
+    color:orange;
+}
+
+#destroyer {
+    color:yellow;
+}
+
+#submarine {
+    color:red;
+}
+
+#patrolboat {
+    color:green;
+}
+
+#cruiser {
+    color:blue;
+}
+
+#arsenal  {
+    width: 20%;
+    padding: 1em;
+    margin-top: 2em;
+    border: 1px solid white;
+}
+
+#arsenal h4  {
+    text-decoration: underline;
+}
+
 #ships, #salvoes {
     display: inline-block;
-    margin-top: 5em;
+    margin-top: 1em;
     margin-left: 4em;
     margin-bottom: 3em;
     width: 440px;
@@ -32,15 +63,20 @@ h3 {
  padding-left: 0.5em;
  margin: 0;
  vertical-align: top;
- outline : 1px solid rgb(116, 16, 16);
+ outline : 1px solid red;
 
 }
 
+
 body {
 
-    background:url(631278.jpg) ;
+    background:url(background1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat : none;
 
    }
+
+ul li {
+    margin-top: 1em;
+}
